@@ -7,18 +7,47 @@
 
     <!-- tailwindcss cnd -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              },
+            },
+          },
+        }
+    </script>
 
     <!-- daisyui cnd -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- google fonts cnd -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome cdn -->
+    <script
+        src="https://kit.fontawesome.com/bbfc4be646.js"
+        crossorigin="anonymous"
+    ></script>
+
     <title>Rent-rio</title>
     <link rel="icon" type="image/x-icon" href="./assets/residential.png">
+
+
+    <style>
+        .manrope> {
+            font-family: "Manrope", sans-serif;
+        }
+    </style>
 </head>
 <!-- head section end -->
 
 <!-- body section start -->
-<body>
+<body class="manrope">
 
     <!-- header section start-->
     <header>
