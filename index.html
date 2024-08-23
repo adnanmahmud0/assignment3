@@ -1,149 +1,314 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<!-- head section start -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- tailwindcss cnd -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/bbfc4be646.js" crossorigin="anonymous"></script>
+
+    <title>Rent-rio</title>
+    <link rel="icon" type="image/x-icon" href="./assets/residential.png">
+
+    <style>
+        .font-manrope {
+            font-family: "Manrope", sans-serif;
+        }
+    </style>
+
     <script>
         tailwind.config = {
           theme: {
             extend: {
               colors: {
-                primarybgcolor: "#F4F4F4",
-
-                primaryfontcolor: "#212121",
-                secondaryfontcolor: "#494949",
-                reversecondaryfontcolor: "#737373",
-                
-                lightbuttonbgcolor: "#ABEF5F",
-                lightgreen: "#ABEF5F",
-
-                matdark: "#1C1C1C",
-
-                diypink: "#E7C1D3",
-                diyyelow: "#EFDA6E",
-                diygreen: "#A4DAC3",
-                diyblue: "#77AAEA",
+                'lightgray': '#F4F4F4',
+                'darkgray': '#212121',
+                'mediumgray': '#494949',
+                'lightergray': '#737373',
+                'lightgreen': '#ABEF5F',
+                'morelightgreen': 'rgba(171, 239, 95, 0.2)',
+                'translucentlight': 'rgba(171, 239, 95, 0.5)',
+                'verydarkgray': '#1C1C1C',
+                'softpink': '#E7C1D3',
+                'lightyellow': '#EFDA6E',
+                'tealcolor': '#A4DAC3',
+                'softblue': '#77AAEA',
               },
             },
           },
         }
     </script>
-
-    <!-- daisyui cnd -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- google fonts cnd -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-
-    <!-- Fontawesome cdn -->
-    <script
-        src="https://kit.fontawesome.com/bbfc4be646.js"
-        crossorigin="anonymous"
-    ></script>
-
-    <title>Rent-rio</title>
-    <link rel="icon" type="image/x-icon" href="./assets/residential.png">
-
-
-    <style>
-        .manrope> {
-            font-family: "Manrope", sans-serif;
-        }
-    </style>
 </head>
-<!-- head section end -->
 
-<!-- body section start -->
-<body class="manrope">
-
-    <!-- header section start-->
-    <header>
-
-        <!-- nav section start-->
-        <nav>
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 6h16M4 12h8m-8 6h16" />
-                      </svg>
+<body class="bg-lightgray font-manrope">
+    <div class="bg-white">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="bg-white px-5 lg:px-40">
+                <!-- Header Section Start -->
+                <header class="bg-gradient-to-t bg-white bg-transparent">
+                    <!-- Navigation Start -->
+                    <nav class="py-7">
+                        <div class="navbar bg-base-100 justify-between">
+                            <div class="navbar-start">
+                                <div class="flex items-center">
+                                    <div class="mr-2 bg-lightgreen py-1 px-2.5 rounded-full">
+                                        <div><i class="fa-solid fa-arrow-right -rotate-45 "></i></div>
+                                    </div>
+    
+                                    <div class="text-darkgray font-black text-2xl">Rent-rio</div>
+                                </div>
+                            </div>
+                            <div class="navbar-center hidden lg:flex">
+                                <ul class="space-x-6 menu-horizontal px-1">
+                                    <li><a class="font-extrabold text-mediumgray">Home</a></li>
+                                    <li><a class="text-mediumgray">Services</a></li>
+                                    <li><a class="text-mediumgray">Portfolio</a></li>
+                                    <li><a class="text-mediumgray">Blogs</a></li>
+                                    <li><a class="text-mediumgray">Contact Us</a></li>
+                                </ul>
+                            </div>
+                                        
+                            <div class="pr-4 navbar-end hidden sm:flex">
+                                <div class="mr-4 bg-white py-2 px-3 rounded-full border border-slate-200 ">
+                                    <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                                </div>
+                                <div class="mr-4 bg-white py-2 px-3 rounded-full border border-slate-200 ">
+                                    <div><i class="fa-solid fa-cart-shopping"></i></div>
+                                </div>
+                                <a class="btn bg-lightgreen rounded-full font-extrabold flex items-center">
+                                    View Details 
+                                    <div class="bg-black py-1 px-1.5 rounded-full ml-2">
+                                        <i class="fa-solid fa-arrow-right text-white -rotate-45"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown">
+                                <button tabindex="0" class="btn btn-ghost py-1 px-4.5 rounded-full border border-slate-200 rounded-full lg:hidden">
+                                    <i class="fa-solid fa-bars"></i>
+                                </button>
+                                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box space-y-2 z-[1] mt-3 w-64 p-2 shadow left-0 transform -translate-x-full">
+                                    <li><a class="font-extrabold text-mediumgray">Home</a></li>
+                                    <li><a class="text-mediumgray">Services</a></li>
+                                    <li><a class="text-mediumgray">Portfolio</a></li>
+                                    <li><a class="text-mediumgray">Blogs</a></li>
+                                    <li><a class="text-mediumgray">Contact Us</a></li>
+                                    <li><a class="text-mediumgray">Cart</a></li>
+                                    <li><a class="text-mediumgray">View Details</a></li>
+                                    <li>
+                                        <div class="input input-bordered flex items-center gap-2 w-full">
+                                            <input type="text" class="grow w-full" placeholder="Search" />
+                                            <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 16 16"
+                                            fill="currentColor"
+                                            class="h-4 w-4 opacity-70">
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                                                clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>   
+                        </div>
+                    </nav>
+                    <!-- Navigation End -->
+    
+                    <!-- Hero Section Start -->
+                    <section>
+                        <div class="hero pb-16">
+                            <div class="hero-content text-center">
+                                <div class="lg:px-11 px-3">
+                                    <div class="flex justify-center pb-5">
+                                        <img class="lg:w-1/2" src="./assets/banner.png" alt="Banner Image">
+                                    </div>
+                                    <h1 class="lg:text-5xl text-2xl font-black text-darkgray">A barn house of this design has a <br class="md:inline hidden">striking appearance</h1>
+                                    <p class="py-6 lg:px-24">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
+                                    <div>
+                                        <a class="btn bg-translucentlight rounded-full font-extrabold lg:inline-flex flex items-center border-solid border-lightgreen px-6 py-3 ">
+                                            View Details 
+                                            <div class="bg-black py-1 px-1.5 rounded-full ml-2">
+                                                <i class="fa-solid fa-arrow-right text-white -rotate-45"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Hero Section End -->
+                </header>
+                <!-- Header Section End -->
+            </div>
+        </div>
+    </div>
+    <!-- Main Section Start -->
+    <main>
+        <div>
+            <div class="flex flex-col items-center justify-center p-10">
+                <div class="rounded-lg max-w-6xl flex flex-col md:flex-row">
+                    <!-- Left content -->
+                    <div class="md:pr-8 md:w-1/2">
+                        <img class="-ml-14 mb-3" src="./assets/Vector.png" alt="">
+                        <button href="#" class="text-sm text-gray-500 flex items-center space-x-2 mb-4 px-4 py-2 rounded-full bg-white">
+                            <svg class="h-4 w-4 rotate-180" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.5 6.5L4 12l5.5 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>About Us</span>
+                        </button>
+                        <h1 class="text-4xl font-bold text-darkgray mb-4">We design thoughtful, <br class="md:inline hidden">liveable spaces</h1>
+                        <p class="text-gray-600 mb-6">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+        
+                        <!-- Buttons/Sections -->
+                        <div class="space-y-4">
+                            <div class="p-6 rounded-lg cursor-pointer bg-white flex">
+                                <img class="mr-6 lg:w-auto w-10 lg:h-auto h-10" src="./assets/commercial.png" alt="">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-darkgray">Commercial</h3>
+                                    <p class="text-gray-500">The barn house captivates with its blend of rustic charm and modern.</p>
+                                </div>
+                            </div>
+                            <div class="p-6 rounded-lg cursor-pointer bg-white flex">
+                                <img class="mr-6 lg:w-auto w-10 lg:h-auto h-10" src="./assets/residential.png" alt="">
+                                <div>
+                                    <h3 class="text-lg font-semibold text-darkgray">Residential</h3>
+                                    <p class="text-gray-500">The barn house captivates with its blend of rustic charm and modern.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <ul
-                      tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li><a>Item 1</a></li>
-                      <li>
-                        <a>Parent</a>
-                        <ul class="p-2">
-                          <li><a>Submenu 1</a></li>
-                          <li><a>Submenu 2</a></li>
-                        </ul>
-                      </li>
-                      <li><a>Item 3</a></li>
-                    </ul>
-                  </div>
-                  <a class="btn btn-ghost text-xl">daisyUI</a>
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li>
-                      <details>
-                        <summary>Parent</summary>
-                        <ul class="p-2">
-                          <li><a>Submenu 1</a></li>
-                          <li><a>Submenu 2</a></li>
-                        </ul>
-                      </details>
-                    </li>
-                    <li><a>Item 3</a></li>
-                  </ul>
-                </div>
-                <div class="navbar-end">
-                  <a class="btn">Button</a>
+                    <!-- Right content -->
+                    <div class="md:w-1/2 mt-10">
+                        <img class="rounded-lg object-cover w-full h-full" src="./assets/Rectangle.png" alt="Modern House Design">
+                    </div>
                 </div>
             </div>
-        </nav>
-        <!-- nav section end-->
-
-        <!-- hero section start-->
-        <div>
-            
         </div>
-        <!-- hero section end-->
-    </header>
-    <!-- header section end-->
+        <div class="max-w-6xl mx-auto bg-white rounded-xl my-20">
+            <div class="lg:flex justify-evenly">
+                <div class="flex flex-col items-center m-14 space-y-2">
+                    <i class="fa-solid fa-comment-dots text-lightergray text-4xl"></i>
+                    <h1 class="text-4xl font-bold text-mediumgray">235+</h1>
+                    <p class="text-lightergray font-medium">Happy Client Review</p>
+                </div>
+                <div class="flex flex-col items-center m-14 space-y-2">
+                    <i class="fa-solid fa-house text-lightergray text-4xl"></i>
+                    <h1 class="text-4xl font-bold text-mediumgray">50+</h1>
+                    <p class="text-lightergray font-medium">Work Departments</p>
+                </div>
+                <div class="flex flex-col items-center m-14 space-y-2">
+                    <i class="fa-solid fa-user text-lightergray text-4xl"></i>
+                    <h1 class="text-4xl font-bold text-mediumgray">30k+</h1>
+                    <p class="text-lightergray font-medium">Our Happy Client</p>
+                </div>
+                <div class="flex flex-col items-center m-14 space-y-2">
+                    <i class="fa-solid fa-user-tie text-lightergray text-4xl"></i>
+                    <h1 class="text-4xl font-bold text-mediumgray">307+</h1>
+                    <p class="text-lightergray font-medium">Staff Members</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="flex flex-col items-center">
+                <button href="#" class="text-sm text-gray-500 flex items-center space-x-2 mb-4 px-4 py-2 rounded-full bg-white">
+                    <svg class="h-4 w-4 rotate-180" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.5 6.5L4 12l5.5 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>How we works</span>
+                </button>
+                <h1 class="text-4xl font-black text-darkgray mb-4">Our Works Process</h1>
+                <p class="text-center">The barn house captivates with its blend of rustic charm and modern sophistication, <br class="md:inline hidden">featuring weathered wood, sleek metal accents.</p>
+            </div>
+            <div class="max-w-6xl mx-auto mt-7">
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 lg:mx-0 mx-5">
+                    <div class="p-6 bg-softpink rounded-xl space-y-1">
+                        <img src="./assets/concept.png" alt="concept">
+                        <h3 class="text-lg font-semibold text-darkgray" >Concept</h3>
+                        <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                    </div>
 
-    <!-- main section start -->
-    <main>
+                    <div class="p-6 bg-lightyellow rounded-xl space-y-1">
+                        <img src="./assets/flow-chart.png" alt="concept">
+                        <h3 class="text-lg font-semibold text-darkgray">Design Process</h3>
+                        <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                    </div>
 
+                    <div class="p-6 bg-tealcolor rounded-xl space-y-1">
+                        <img src="./assets/vision.png" alt="concept">
+                        <h3 class="text-lg font-semibold text-darkgray">Supervision</h3>
+                        <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                    </div>
+
+                    <div class="p-6 bg-softblue rounded-xl space-y-1">
+                        <img src="./assets/budget-planning.png" alt="concept">
+                        <h3 class="text-lg font-semibold text-darkgray">Budget Planning</h3>
+                        <p>The barn house captivates with its blend of rustic charm and modern.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20">
+            <div class="bg-[url('./assets/bg.jpg')] bg-no-repeat bg-cover">
+                <div class="py-20 max-w-6xl mx-auto lg:px-0 px-5">
+                    <div class="flex flex-col items-center justify-center">
+                        <button href="#" class="bg-morelightgreen text-sm flex items-center space-x-2 mb-4 px-4 py-2 rounded-full">
+                            <svg class="h-4 w-4 rotate-180" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.5 6.5L4 12l5.5 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="font-bold">Let’s Connect</span>
+                        </button>
+                        <h1 class="text-4xl font-extrabold text-center mb-2">Let’s Discuss Next Project</h1>
+                        <p class="text-center text-gray-600 mb-6">The barn house captivates with its blend of rustic charm and modern sophistication, <br class="md:inline hidden">featuring weathered wood, sleek metal accents.</p>
+                    </div>
+                    <form class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="text" placeholder="First Name*" class="input input-bordered rounded-full py-7 px-5 w-full">
+                            <input type="text" placeholder="Last Name*" class="input input-bordered rounded-full py-7 px-5 w-full">
+                            <input type="text" placeholder="Phone Number*" class="input input-bordered rounded-full py-7 px-5 w-full">
+                            <input type="email" placeholder="Email Number*" class="input input-bordered rounded-full py-7 px-5 w-full">
+                        </div>
+                        <input placeholder="Write your message here" class="input input-bordered rounded-3xl py-2 px-4 w-full h-56"></input>
+                        <a class="btn bg-lightgreen border-none rounded-full font-extrabold text-xl flex items-center">
+                            Send Mail 
+                            <div class="bg-black py-1 px-2.5 rounded-full ml-2 border">
+                                <i class="fa-solid fa-arrow-right text-white -rotate-45"></i>
+                            </div>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
-    <!-- main section end -->
+    <!-- Main Section End -->
 
-    <!-- footer section start -->
+    <!-- Footer Section Start -->
     <footer>
+        <div class="navbar-start">
+            <div class="flex items-center">
+                <div class="mr-2 bg-lightgreen py-1 px-2.5 rounded-full">
+                    <div><i class="fa-solid fa-arrow-right -rotate-45 "></i></div>
+                </div>
 
+                <div class="text-darkgray font-black text-2xl">Rent-rio</div>
+            </div>
+        </div>
     </footer>
-    <!-- footer section end -->
-
+    <!-- Footer Section End -->
+    </div>
 </body>
-<!-- body section end -->
-
 </html>
